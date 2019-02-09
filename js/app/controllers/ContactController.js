@@ -1,7 +1,13 @@
 function ContactController() {
-  var vm = this;
-
-  this.changeName = function () {
-    vm.name = 'Something else!'
-  }
+	let vm = this;
+	vm.name = 'Steve Jobs';
+	vm.email = 'steve@apple.com';
+	vm.phone = '0987654321';
+	vm.changeName = () => {
+		vm.name = 'Tim Cook';
+	};
 }
+
+angular
+	.module('app')
+	.controller('ContactController', ContactController);
